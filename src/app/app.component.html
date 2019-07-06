@@ -5,18 +5,23 @@
   
   <!-- main app container -->
     
-    <form [formGroup]="eduForm" (ngSubmit)='onSubmit(eduForm.value)' >
+    <form [formGroup]="eduForm" (ngSubmit)='onSubmit(eduForm.value)' ngNativeValidate>
       
       <div *ngFor='let x of formData'>
         
-        <span *ngIf="x.ControlType=='textarea'">
+        <!-- <span *ngIf="x.ControlType=='textarea'">
           <label>{{x.DisplayName}}</label>
-          <textarea id="FirstName" [formControlName]="x.DisplayName" ></textarea>
-        </span>
+          <textarea id="FirstName" [formControlName]="x.DisplayName" [required]="x.controlledValue"
+          oninvalid="this.setCustomValidity('User ID is a must')"
+          onchange="this.setCustomValidity('')"
+          ></textarea>
+        </span> -->
         
         <span *ngIf="x.ControlType=='textbox'">
           <label>{{x.DisplayName}}</label>
-          <input id="LastName" type='text' [formControlName]="x.DisplayName" />
+          <input id="LastName" type='text' [formControlName]="x.DisplayName" [required]="x.controlledValue"
+        
+          />
         </span>
         
         
