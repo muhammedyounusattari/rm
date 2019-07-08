@@ -19,26 +19,33 @@ export class AppComponent implements OnInit {
     {
       "Id": 1, "SecurityGroupId": "EDU", "FunctionName": null, "APIGet": null, "APIPost": null,
       "OrderNumber": 1, "DisplayName": "LastName", "Access": null, "ControlType": "textbox", "AttributeName": "LastName",
-      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1, controlledValue:false
+      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1, controlledValue:'false'
     }, {
       "Id": 2, "SecurityGroupId": "EDU",
       "FunctionName": null, "APIGet": null, "APIPost": null, "OrderNumber": 2, "DisplayName": "Brithday", "Access": null,
-      "ControlType": "textbox", "AttributeName": "Birthday", "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1,controlledValue:true
+      "ControlType": "textbox", "AttributeName": "Birthday", "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1,controlledValue:'true'
     },
     {
       "Id": 1, "SecurityGroupId": "EDU", "FunctionName": null, "APIGet": null, "APIPost": null,
       "OrderNumber": 1, "DisplayName": "FirstName", "Access": null, "ControlType": "textbox", "AttributeName": "FirstName",
-      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1 ,controlledValue:false
+      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1 ,controlledValue:'false'
     },
     {
       "Id": 1, "SecurityGroupId": "EDU", "FunctionName": null, "APIGet": null, "APIPost": null,
-      "OrderNumber": 1, "DisplayName": "full name", "Access": null, "ControlType": "textbox", "AttributeName": "Full name",
-      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1 ,controlledValue:true
+      "OrderNumber": 1, "DisplayName": "full1 name", "Access": null, "ControlType": "textbox", "AttributeName": "Full1 name",
+      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1 ,controlledValue:'true'
+    },
+    {
+      "Id": 1, "SecurityGroupId": "EDU", "FunctionName": null, "APIGet": null, "APIPost": null,
+      "OrderNumber": 1, "DisplayName": "full2 name", "Access": null, "ControlType": "textbox", "AttributeName": "Full2 name",
+      "DefaultValue": null, "PlaceHolder": null, "ListValues": null, "PageNumber": 1 ,controlledValue:'true'
     }
   ];
 
   public eduForm: FormGroup;
   public formData: any;
+  public add:boolean=true;
+  public value:number =0;
   public url: string = 'https://reqres.in/api/users?page=2';
 
 
